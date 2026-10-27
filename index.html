@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Trivia Challenge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <section id="start-screen">
+      <h1>JavaScript Trivia Challenge</h1>
+      <p class="lead">Test what you know. 8 questions, 15 seconds each, 90 seconds in total.</p>
+      <p class="hint">Click an answer, or press A-D or 1-4 on your keyboard.</p>
+      <button id="start-btn" class="btn primary" type="button">Start game</button>
+    </section>
+
+    <section id="quiz-screen" class="hidden">
+      <header class="quiz-header">
+        <span id="progress">Question 1 of 8</span>
+        <span class="timers">
+          <span>Question <strong id="question-timer">15s</strong></span>
+          <span>Game <strong id="game-timer">90s</strong></span>
+        </span>
+      </header>
+      <div class="timer-track" aria-hidden="true">
+        <div id="timer-bar" class="timer-bar"></div>
+      </div>
+      <h2 id="question-text"></h2>
+      <div id="choices" class="choices"></div>
+      <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+      <button id="next-btn" class="btn primary hidden" type="button">Next question</button>
+    </section>
+
+    <section id="result-screen" class="hidden">
+      <h1>Game over</h1>
+      <p id="score" class="score"></p>
+      <p id="summary" class="lead"></p>
+      <p id="rating" class="rating"></p>
+      <h3>Review</h3>
+      <ul id="review" class="review"></ul>
+      <button id="restart-btn" class="btn primary" type="button">Play again</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
